@@ -161,7 +161,7 @@ public:
       @param parent A pointer to the MPU6050 class */
   Adafruit_MPU6050_Temp(Adafruit_MPU6050 *parent) { _theMPU6050 = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x650;
@@ -178,7 +178,7 @@ public:
     _theMPU6050 = parent;
   }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x651;
@@ -192,7 +192,7 @@ public:
       @param parent A pointer to the MPU6050 class */
   Adafruit_MPU6050_Gyro(Adafruit_MPU6050 *parent) { _theMPU6050 = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x652;
