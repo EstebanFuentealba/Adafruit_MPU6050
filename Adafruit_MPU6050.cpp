@@ -776,12 +776,12 @@ Adafruit_Sensor *Adafruit_MPU6050::getGyroSensor(void) { return gyro_sensor; }
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the MPU6050's gyroscope sensor
+    @brief  Gets the sensor_adafruit_t data for the MPU6050's gyroscope sensor
 */
 /**************************************************************************/
-void Adafruit_MPU6050_Gyro::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_MPU6050_Gyro::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "MPU6050_G", sizeof(sensor->name) - 1);
@@ -811,12 +811,12 @@ bool Adafruit_MPU6050_Gyro::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the MPU6050's accelerometer
+    @brief  Gets the sensor_adafruit_t data for the MPU6050's accelerometer
 */
 /**************************************************************************/
-void Adafruit_MPU6050_Accelerometer::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_MPU6050_Accelerometer::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "MPU6050_A", sizeof(sensor->name) - 1);
@@ -846,12 +846,12 @@ bool Adafruit_MPU6050_Accelerometer::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the MPU6050's tenperature
+    @brief  Gets the sensor_adafruit_t data for the MPU6050's tenperature
 */
 /**************************************************************************/
-void Adafruit_MPU6050_Temp::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_MPU6050_Temp::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "MPU6050_T", sizeof(sensor->name) - 1);
